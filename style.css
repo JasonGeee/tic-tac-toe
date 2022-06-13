@@ -31,6 +31,33 @@ h1 {
     font-size: 2.1rem;
 }
 
+.players-turn, 
+.player-wins,
+.player-loses,
+.player-tie {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.player-tie {
+    transform: scale(1.1);
+}
+
+.player-wins {
+    background-color: green;
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.player-loses {
+    background-color: rgb(180, 54, 54);
+    transition: 0.2s;
+    transform: scale(0.8);
+}
+
 /* Cells CSS */
 .container {
     display: grid;
@@ -40,7 +67,7 @@ h1 {
     background-color: #5780D2;
 }
 
-.cell {
+.container > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,4 +112,13 @@ button:hover {
 span > img {
     width: 30px;
     height: 30px;
+}
+
+/* Pesudoclasses */
+
+.container > div:hover{
+    transition: 0.5s;
+}
+.container > div:hover {
+    filter: brightness(75%);
 }
